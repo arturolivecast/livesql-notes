@@ -1,0 +1,38 @@
+SELECT * FROM hr.employees;
+SELECT * FROM hr.departments;
+SELECT * FROM hr.locations;
+SELECT * FROM hr.countries;
+SELECT * FROM hr.regions;
+
+SELECT employee_id, first_name, last_name, email, salary 
+FROM hr.employees;
+
+SELECT department_id, department_name 
+FROM hr.departments;
+
+
+SELECT employee_id AS id, first_name AS nombre, last_name AS apellido, email, salary AS Salario
+FROM hr.employees;
+
+SELECT employee_id AS "ID de empleado", first_name AS "Nombre", last_name AS "Apellido", email, salary AS Salario
+FROM hr.employees;
+
+
+SELECT employee_id, first_name || ' ' || last_name AS "Nombre completo", email, salary
+FROM hr.employees;
+
+
+SELECT employee_id, last_name, salary, salary * 1.15 AS "Salario incrementado"
+FROM hr.employees;
+
+SELECT employee_id, last_name, salary, commission_pct
+FROM hr.employees;
+
+SELECT employee_id, last_name, salary, NVL(commission_pct, 0), 
+       salary * NVL(commission_pct, 0)
+FROM hr.employees;
+
+-- Esta consulta despliega empleados:
+SELECT employee_id, last_name, salary, NVL(commission_pct, 0), 
+       salary * NVL(commission_pct, 0)
+FROM hr.employees;
