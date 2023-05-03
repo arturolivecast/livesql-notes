@@ -28,6 +28,12 @@ FROM hr.employees;
 SELECT employee_id, last_name, salary, commission_pct
 FROM hr.employees;
 
+--Este es un comentario de una línea
+
+/* Este es 
+   un comentario
+   de múltiples líneas */
+   
 SELECT employee_id, last_name, salary, NVL(commission_pct, 0), 
        salary * NVL(commission_pct, 0)
 FROM hr.employees;
