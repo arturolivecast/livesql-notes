@@ -1,0 +1,89 @@
+SELECT employee_id, last_name, salary
+FROM hr.employees
+WHERE employee_id >= 140 AND employee_id <= 145
+
+SELECT employee_id, last_name, salary
+FROM hr.employees
+WHERE employee_id BETWEEN 140 AND 145
+
+
+SELECT employee_id, last_name, hire_date
+FROM hr.employees
+WHERE hire_date BETWEEN '29-JAN-05' AND '26-OCT-05'
+
+
+SELECT employee_id, last_name, hire_date
+FROM hr.employees
+WHERE last_name = 'King'
+
+SELECT employee_id, last_name, hire_date
+FROM hr.employees
+WHERE last_name = 'king'
+
+SELECT employee_id, last_name, hire_date
+FROM hr.employees
+WHERE last_name = 'King' OR last_name = 'Smith' OR employee_id = 102
+
+
+SELECT employee_id, last_name, hire_date
+FROM hr.employees
+WHERE last_name <> 'King'
+
+SELECT employee_id, last_name, hire_date
+FROM hr.employees
+WHERE last_name != 'King'
+
+SELECT employee_id, last_name, hire_date
+FROM hr.employees
+WHERE last_name LIKE 'S%'
+
+SELECT employee_id, last_name, hire_date
+FROM hr.employees
+WHERE last_name LIKE '_a%'
+
+
+
+SELECT employee_id, last_name, hire_date
+FROM hr.employees
+WHERE employee_id = 120 OR employee_id = 100 OR employee_id = 102
+
+SELECT employee_id, last_name, hire_date
+FROM hr.employees
+WHERE employee_id IN (120, 100, 102)
+
+
+SELECT employee_id, last_name, hire_date, salary, commission_pct
+FROM hr.employees
+WHERE commission_pct IS NULL
+
+SELECT employee_id, last_name, hire_date, salary, commission_pct
+FROM hr.employees
+WHERE commission_pct IS NOT NULL
+
+
+SELECT employee_id, last_name, hire_date, salary, commission_pct
+FROM hr.employees
+WHERE employee_id NOT IN (100, 101, 102)
+
+SELECT employee_id, last_name, hire_date, salary, commission_pct
+FROM hr.employees
+WHERE salary NOT BETWEEN 15000 AND 20000
+
+
+SELECT employee_id, last_name, hire_date, salary, commission_pct
+FROM hr.employees
+WHERE employee_id < 140
+ORDER BY salary DESC
+
+
+SELECT employee_id, last_name, hire_date, salary, commission_pct
+FROM hr.employees
+WHERE employee_id < 140
+ORDER BY salary DESC, last_name
+
+SELECT employee_id, last_name, salary, commission_pct
+FROM hr.employees
+WHERE employee_id < 140
+ORDER BY 3
+
+
